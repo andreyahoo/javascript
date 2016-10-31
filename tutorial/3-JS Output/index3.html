@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>minha primeira pagina web</h1>
+		<p>meu primeiro paragrafo</p>
+		<!-- <input type="button" onclick="funcao1()" value="Exibir Alert" /> -->
+		<input type="text" name="" id="nome" placeholder="nome completo">
+		<input type="text" name="" id="idade" placeholder="ano de nascimento">
+		<button type="" onclick="calcularIdade()">calcular</button>
+		<h1 id="resultado"></h1>
+		
+		<script>
+		var dataAtual= 2016
+		var  nm;
+		var dataNascimento;
+		var calc;
+
+			// var x = 8;
+		//    var y = 10
+		//    var z =(x=y)
+			// alert(x <= 9);
+			// document.alert("1+1");
+		function calcularIdade () {
+			// alert( "funcionou")	
+		nm = document.getElementById("nome").value;
+		dataNascimento = document.getElementById("idade").value;
+		calc = dataAtual-dataNascimento;
+
+
+
+
+
+		document.getElementById('resultado').innerHTML = nm+" tem "+calc+" anos.";
+
+
+		console.log(calc)
+		}
+		</script>
+	</body>
+</html>
