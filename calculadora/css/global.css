@@ -1,0 +1,39 @@
+#numeral div{
+    background: black;
+}
+div#numeral {
+    width: 171px;
+    float: left;
+}
+#opreradores{
+	width: 114px;
+	float: left;
+
+}
+#opreradores div{
+	background: #626262;
+
+}
+sup {
+    font-size: 15px;
+}
+
+#numeral div,#opreradores div{
+	width: 55px;
+	height: 55px;
+	color: white;
+	float: left;
+	font-size: 25pt;
+	margin: 1px;
+	padding: 10px;
+	box-sizing: border-box;
+    text-align: center;
+
+}
+
+
+div#visor input {
+	height: 26px;
+	width: 280px;
+
+}

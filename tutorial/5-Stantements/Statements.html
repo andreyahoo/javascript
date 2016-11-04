@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style type="text/css" media="screen">
+			img {
+		width: 657px;
+		height: 302px;
+		}
+		</style>
+	</head>
+	<body>
+		<img src="novayork.jpg" onmouseover="this.src='novayork.jpg'" onmouseout="this.src='saopaulo.jpg'"/ >
+		<p id="demo1"></p>
+		<input type="text" placeholder="email" id="email">
+		<input type="text" placeholder="cpf" id="cpf">
+		<input type="text" placeholder="rg" id="rg">
+		<button type=""onclick="pessoa(document.getElementById('email').value ,document.getElementById('cpf').value, document.getElementById('rg').value)">cadastrar
+		</button>
+		<script>
+		 	// document.getElementsByClassName('demo')[1].innerHTML = Date()
+			function pessoa(email,cpf,rg) {
+				// return "<p>"+email+"</p>" +"<p>"+cpf+"</p>"+"<p>"+rg+"</p>";
+				document.getElementById("demo1").innerHTML = "<p>"+email+"</p>" +"<p>"+cpf+"</p>"+"<p>"+rg+"</p>";
+				// body... chass
+				alert (document.getElementById('email').value ,document.getElementById('cpf').value, document.getElementById('rg').value)
+			}
+			// carro("chevrolet","023","RODA14");
+		// document.getElementById("demo1").innerHTML = pessoa("email","cpf","rg");
+		// alert( carro("chevrolet","023","RODA14"));
+		// var  x= 6;
+		// alert ( x == 6);
+		</script>
+		
+	</body>
+</html>
