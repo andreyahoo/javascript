@@ -16,10 +16,34 @@
 		<input type="text" placeholder="email" id="email">
 		<input type="text" placeholder="cpf" id="cpf">
 		<input type="text" placeholder="rg" id="rg">
-		<button type=""onclick="pessoa(document.getElementById('email').value ,document.getElementById('cpf').value, document.getElementById('rg').value)">cadastrar
+		<button type=""onclick="validarCadastro()">cadastrar
 		</button>
+<!-- 		<button type=""onclick="pessoa(document.getElementById('email').value ,document.getElementById('cpf').value, document.getElementById('rg').value)">cadastrar
+		</button> -->
 		<script>
 		 	// document.getElementsByClassName('demo')[1].innerHTML = Date()
+		 	function validarCadastro(){
+		 		var recebEmail;
+		 		var recebCpf;
+		 		var recebRg;
+
+		 		recebEmail=document.getElementById('email').value;
+		 		recebCpf=document.getElementById('cpf').value;
+		 		recebRg=document.getElementById('rg').value;
+
+		 		if(recebEmail == ""){
+		 			alert("email vazio");
+		 		}else if(recebCpf == ""){
+		 			alert("cpf Vazio")
+		 		}else if(recebRg==""){
+		 			alert("rg Vazio")
+		 		}else{
+		 			alert("Salvando no banco..");
+		 		}
+		 	}
+
+
+
 			function pessoa(email,cpf,rg) {
 				// return "<p>"+email+"</p>" +"<p>"+cpf+"</p>"+"<p>"+rg+"</p>";
 				document.getElementById("demo1").innerHTML = "<p>"+email+"</p>" +"<p>"+cpf+"</p>"+"<p>"+rg+"</p>";
