@@ -1,8 +1,7 @@
-// andre.js
+
 var numTela="";
 var num1 ="";
-var num2 ="";
-var sinal;
+var sinal ="";
 function exebirnaTela(valor){
 	numTela = numTela+valor;
 	document.getElementById('tela').value =numTela;
@@ -13,44 +12,36 @@ function exebirnaTela(valor){
 
 function calcular (operador){
 
+if(sinal==""){
+	sinal=operador;
+	num1=numTela;
+	numTela="";
+	document.getElementById("tela").value="";
 
+}else{
 
-	// alert (contval);
+	resultado(operador);
+	numTela="";
 
-if(operador != "="){
-	sinal = operador;
 }
-
-
-	if(num1==""){
-		num1=numTela;
-		numTela = "";
-		document.getElementById('tela').value ="";
-	}else{
-		num2=numTela;
-		numTela = "";
-		document.getElementById('tela').value ="";
-		resultado(operador);
-	}
-
 
 }
 
 
 function resultado(s){
-	var test;
+	
 	// alert(test);
 	if(sinal=="+"){
-		test = parseInt(num1)+parseInt(num2);
+		num1 = parseInt(num1)+parseInt(numTela);
 	}else if(sinal=="-"){
-		test = parseInt(num1)-parseInt(num2);
+		num1 = parseInt(num1)-parseInt(numTela);
 	}else if(sinal=="*"){
-		test = parseInt(num1)*parseInt(num2);
+		num1 = parseInt(num1)*parseInt(numTela);
 	}else if(sinal=="/"){
-		test = parseInt(num1)/parseInt(num2);
+		num1 = parseInt(num1)/parseInt(numTela);
 	}
-	document.getElementById('tela').value =test;
-
+	document.getElementById('tela').value =num1;
+	sinal=s;
 }
 // "andre"
 // andre
